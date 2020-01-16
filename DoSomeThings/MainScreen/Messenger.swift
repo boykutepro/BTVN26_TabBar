@@ -17,13 +17,26 @@ class Messenger: UIViewController {
         
         return view
     } ()
+    
+    var items: [item] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setupTableView()
         createSearchBar()
+        fakeData()
     }
+    
+    func fakeData(){
+        let item1 = item(image: "1.2", name: "HIHI HIHIHI", mes: "HIHIHIHI HIH I HIH I HI H IH IH I HI H")
+        let item2 = item(image: "anh3", name: "HAHAHA HAHAA", mes: "hahahahahahaahahah")
+        let item3 = item(image: "anh4", name: "OHOHOHOHO HOOHo", mes: "OHOHohohohohohn hooo hoo")
+        let item4 = item(image: "avt", name: "James Shainline", mes: "Ahiihi hohoh hahahahehehe hihi hohohoho")
+        items = [item4, item1, item2, item3, item4, item1, item2, item3, item4, item1, item1, item3, item4, item2, item4, item1]
+        
+    }
+    
     func setupTableView(){
         view.addSubview(tableView)
         tableView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
@@ -66,9 +79,7 @@ extension Messenger: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-           // tableView.deleteSections(IndexSet.self, with: .fade)
-            //tableView.deleteRows(at: [indexPath], with: .fade)
-            //tableView.numberOfRows(inSection: 14)
+            items.remove(at: indexPath.row)
             tableView.reloadData()
         }
     }
@@ -83,11 +94,10 @@ extension Messenger: UITableViewDataSource {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: "id") as! CustomCellChat
         }
         
-        cell?.avt.image = UIImage(named: "avt")
-        cell?.nameLabel.text = "James Shainline"
-        cell?.mesLabel.text = "Do you free tonight? I want to take you somewhere :)) I miss you so much babe"
+        cell?.avt.image = UIImage(named: items[indexPath.row].image)
+        cell?.nameLabel.text = items[indexPath.row].name
+        cell?.mesLabel.text = items[indexPath.row].mes
         
-    
         return cell!
     }
     
@@ -95,7 +105,7 @@ extension Messenger: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 15
+        return items.count
     }
     
 }

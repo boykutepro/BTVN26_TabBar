@@ -23,6 +23,7 @@
 		9FB84E8D23CE9A180088C406 /* GridView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FB84E8B23CE9A180088C406 /* GridView.xib */; };
 		9FB84E9323CEA8AE0088C406 /* CustomCellChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB84E9223CEA8AE0088C406 /* CustomCellChat.swift */; };
 		9FB84EBB23CF0C980088C406 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB84EBA23CF0C980088C406 /* Messenger.swift */; };
+		9FB84EBD23D05D7D0088C406 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB84EBC23D05D7C0088C406 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		9FB84E8B23CE9A180088C406 /* GridView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridView.xib; sourceTree = "<group>"; };
 		9FB84E9223CEA8AE0088C406 /* CustomCellChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellChat.swift; sourceTree = "<group>"; };
 		9FB84EBA23CF0C980088C406 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		9FB84EBC23D05D7C0088C406 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				9FB84EBA23CF0C980088C406 /* Messenger.swift */,
+				9FB84EBC23D05D7C0088C406 /* Item.swift */,
 				9FB84E7E23CE99AE0088C406 /* ContactView.swift */,
 				9FB84E7F23CE99AE0088C406 /* ContactView.xib */,
 				9FB84E8223CE99CC0088C406 /* PeopleView.swift */,
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FB84EBD23D05D7D0088C406 /* Item.swift in Sources */,
 				9FB84E6A23CE98760088C406 /* ViewController.swift in Sources */,
 				9FB84E6623CE98760088C406 /* AppDelegate.swift in Sources */,
 				9FB84E8C23CE9A180088C406 /* GridView.swift in Sources */,
